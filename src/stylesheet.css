@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+/* General Things */
+
+
+.logoarea {
+    background-color: #222222;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.logo {
+    z-index: 5
+}
+
+.arrowarea {
+    height: 20vh;
+    background-color: #222222;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+
+
+
+}
+
+.img {
+
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+/* NAV TOP MAIN */
+
+h2 {
+    vertical-align: center;
+    text-align: center;
+
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    ;
+    box-sizing: border-box;
+    font-size: 22px;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: space-between;
+    background-color: #00BAF0;
+    background: linear-gradient(to left, #222222, #025355);
+
+    color: #DDDDDD;
+    height: 70px;
+    padding: 1em;
+
+
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu>li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-toggle~.menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked~.menu li {
+        border: 1px solid #DDDDDD;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+    }
+
+    .menu>li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+}
+
+
+
+
+
+
+/* ------------------------------------ NEW ----------------------------------------*/
+/* ------------------------------------ HEAD ----------------------------------------*/
+
+
+.lower-area {
+    background-color: #222222;
+}
+
+
+.header {
+
+    background-image: url(img/logo_norvi.png);
+    background-size: 100vh;
+    background-position: center;
+    /* keeps aspect ratio and scales in the smallest possible way */
+    height: 80vh;
+    /*height of box*/
+    display: flex;
+    /*flexbox*/
+    text-align: center;
+    /* text in center **/
+    flex-direction: column;
+    width: 100%;
+    background-color: #222222;
+    background-repeat: no-repeat;
+}
+
+.headerarrow {
+    height: 20vh;
+}
+
+
+.leftLogo {
+    text-align: left;
+    height: 100px;
+    background-color: #222222;
+}
+
+
+
+
+
+.Photography {
+    font-family: 'Poppins', sans-serif;
+    ;
+    font-size: 20px;
+    color: rgb(181, 181, 181);
+    margin-top: -10px;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+
+
+}
+
+
+.textmainarea {
+    background-color: #222222;
+    text-align: center;
+    color: rgb(167, 167, 167);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Arimo, sans-serif;
+    font-size: 80%;
+    width: 100%;
+
+}
+
+.maintext {
+    padding: 50px;
+
+
+}
+
+
+
+/* GALLERY */
+
+
+
+.grid {
+    padding: 1em;
+
+}
+
+.grid-inner {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.item {
+    flex: 1 1 100%;
+    padding: 0.5em;
+}
+
+.item-inner {
+    background-size: cover;
+    background-image: url("img/1.jpg");
+    padding-top: calc(100% / (16/9));
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.item:nth-child(1) .item-inner {
+    background-image: url("img/1.jpg")
+}
+
+
+.item:nth-child(2) .item-inner {
+    background-image: url(img/2.jpg)
+}
+
+.item:nth-child(3) .item-inner {
+    background-image: url(img/3.jpg)
+}
+
+.item:nth-child(4) .item-inner {
+    background-image: url(img/4.jpg)
+}
+
+.item:nth-child(5) .item-inner {
+    background-image: url(img/5.jpg)
+}
+
+.item:nth-child(6) .item-inner {
+    background-image: url(img/6.jpg)
+}
+
+@media screen and (min-width: 700px) {
+    .item {
+        flex: 1 1 50%;
+    }
+}
+
+/* BLOG */
+
+
+
+.articles {
+    color: #4a4a4a;
+    margin-left: 20px;
+    max-width: 900px;
+    background-color: rgb(247, 247, 247);
+
+    flex-direction: column;
+
+    margin-right: 20px;
+
+
+
+}
+
+.textrechts {
+    display: flex;
+
+}
+
+
+
+.resize {
+    width: auto !important;
+    /*Keep the aspect ratio of the image*/
+    height: 400px !important;
+    margin: 0 auto 1em auto;
+    /*Center the image*/
+}
+
+
+.blogfotolinks {
+    display: flex;
+
+
+
+}
+
+.spacer {
+    width: 20em;
+}
+
+@media (max-width: 700px) {
+    .blogfotolinks {
+        flex-direction: column;
+
+    }
+
+}
+
+.contactbackground {
+
+    background-image: url(img/contact.jpg);
+    /* Photo of head*/
+    background-size: 100%;
+    /* keeps aspect ratio and scales in the smallest possible way */
+    height: 700px;
+    /*height of box*/
+    display: flex;
+    /*flexbox*/
+    text-align: center;
+    /* text in center **/
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .contactbackground {
+        background-size: cover;
+        height: 200px;
+    }
+}
+
+
+
+/* CONTACT */
+.contact {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #333;
+    color: rgb(70, 70, 70);
+    flex-direction: column;
+
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 8px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 10px;
+    /* Add a top margin */
+    margin-bottom: 30px;
+    /* Bottom margin */
+    resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #454545;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a blue color */
+input[type=submit]:hover {
+    background-color: #09b3bc;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.impressum {
+    margin-left: 1em;
+    margin-right: 1em;
+
+
+}
+
+/*Scroll Button */
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#down {
+    margin-top: 100%;
+    padding-bottom: 25%;
+}
+
+
+/* MAP AREA */
+
+#map {
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    border-radius: 25px;
+}
+
+
+@media (max-width: 685px) {
+    /* .row {
+        flex-direction: column;
+        width: 80%;
+    } */
+
+    .column {
+        flex-direction: row;
+    }
+
+
+}

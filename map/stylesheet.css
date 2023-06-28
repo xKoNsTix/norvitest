@@ -1,0 +1,80 @@
+/* 
+<!--    Salzburg University of Applied Sciences
+        Multimedia Technology
+        Multimedia Project 1
+        Creator: Konstantin Kowarsch (part-time-viking)
+--> */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+
+.mapMenu {
+    z-index: 555;
+    position: absolute;
+    right: 2vh;
+    display: flex;
+
+
+
+}
+
+body {
+    background: #222222;
+    ;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.menuItem2 {
+    background-color: #dddddd;
+    margin-top: 10vh;
+    margin-right: -3vh;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    position: absolute;
+    right: 40px;
+    text-align: center;
+    font-weight: 1000;
+
+}
+
+@media(max-width: 584px) {
+    .menuItem2 {
+        opacity: 0;
+    }
+
+}
+
+
+
+
+.loginButton {
+    background-color: #dddddd;
+    border: none;
+    color: #222222;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: 1000;
+    border-radius: 10px;
+    transition: 0.8s;
+    font-weight: 900;
+
+}
+
+.loginButton:hover {
+    background: #222222;
+    color: #048084;
+    box-shadow: inset 0 0 0 3px #048084;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #DDDDDD;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.footer {
+
+    background-color: #222222;
+    text-align: center;
+    color: rgb(100, 100, 100);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Arimo, sans-serif;
+    font-size: 80%;
+    width: 100%;
+
+
+}
+
+
+@media (max-width: 480px) {
+    .footer {
+        margin-top: 40%
+    }
+
+}
